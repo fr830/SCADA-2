@@ -151,6 +151,11 @@ namespace TestStation
                 MessageBox.Show("您尚未與機組PLC進行連線或是連線已經終止", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+        private void Btn_Authority_Click(object sender, EventArgs e)
+        {
+            SendAuthority(this, new AuthorityEvent() { UserName = this.UserName, Password = this.PassWird, Authority = this.Auth });
+            loginForm.ShowDialog();
+        }
         //Button_Click_Event_Stop
 
         //Customize_Function_Start
@@ -222,6 +227,8 @@ namespace TestStation
                 ConnectStatusEventHandler(this, new ConnectStatusEvent() { ConnectStatus = Lab_StationConnectStatus.Text, UnitConnectStatus = Lab_UnitConnectStatus.Text, UnitConnectStatusColor = Lab_UnitConnectStatus.ForeColor.Name });
             }
         }
+
+
         //Customize_Function_Stop
     }
 }

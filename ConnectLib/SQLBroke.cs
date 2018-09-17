@@ -25,7 +25,9 @@ namespace ConnectLib
             SqlConnectionStringBuilder = new SqlConnectionStringBuilder();
             SqlConnectionStringBuilder.DataSource = "DESKTOP-M4V9RKV";    //資料庫指標
             SqlConnectionStringBuilder.InitialCatalog = DataBase;
-            SqlConnectionStringBuilder.IntegratedSecurity = true;
+            SqlConnectionStringBuilder.IntegratedSecurity = false;
+            SqlConnectionStringBuilder.UserID = "Hanpower";
+            SqlConnectionStringBuilder.Password = "24722674";
             SqlConnection = new SqlConnection(SqlConnectionStringBuilder.ToString());  //使用指標連接資料庫
         }
         public void Insert(string[] UnitInfo, short[] Location, string TableName)
@@ -202,7 +204,7 @@ namespace ConnectLib
             DataTable dataTable = new DataTable();
             try
             {
-                string TextComm = string.Format("SELECT * FROM dbo.{0} ORDER BY Time DESC", TableName);
+                string TextComm = string.Format("SELECT * FROM dbo.{0} ", TableName);
                 SqlCommand SelectComm = new SqlCommand(TextComm, _SqlConnection);
                 if (_SqlConnection.State == ConnectionState.Closed)
                 {
