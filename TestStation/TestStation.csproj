@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9EF93EE4-C890-44BE-A2F3-4F856888701C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TestStation</RootNamespace>
+    <AssemblyName>TestStation</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlarmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlarmForm.Designer.cs">
+      <DependentUpon>AlarmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConnectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConnectForm.Designer.cs">
+      <DependentUpon>ConnectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataLogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataLogForm.Designer.cs">
+      <DependentUpon>DataLogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadForm.Designer.cs">
+      <DependentUpon>LoadForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagentForm.Designer.cs">
+      <DependentUpon>ManagentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UnitPIDForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnitPIDForm.Designer.cs">
+      <DependentUpon>UnitPIDForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AlarmForm.resx">
+      <DependentUpon>AlarmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConnectForm.resx">
+      <DependentUpon>ConnectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataLogForm.resx">
+      <DependentUpon>DataLogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadForm.resx">
+      <DependentUpon>LoadForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagentForm.resx">
+      <DependentUpon>ManagentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnitPIDForm.resx">
+      <DependentUpon>UnitPIDForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ConnectLib\ConnectLib.csproj">
+      <Project>{1d5a3f39-6db3-44b9-bf57-8a5f9edd54f2}</Project>
+      <Name>ConnectLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{42a3b8e9-8b3e-4ce4-81bc-fee0305996b1}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SupToolLib\SupToolLib.csproj">
+      <Project>{eb2935e2-9d6c-436f-8e2d-2236836b933a}</Project>
+      <Name>SupToolLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\上紅H+下藍HP-500.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\connect_creating_48px_15285_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlarmButtonR3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AuthorityButtonR3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LocationButtonR4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ManagentButtonR3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ServerButtonR2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLServerButtonR2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SystemButtonR2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UnitButtonR3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ServerButtonR3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLServerButtonR3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SystemButtonR3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\試車站圖.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\紅H+藍HANPOWER 201701.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\試車站圖2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\試車站圖3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\試車站圖4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LockR2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refpKa.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8h3d03.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OL-1 ORC1 .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OL-1 ORC7 .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PID_BackgroundOut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReturnButtonR3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ooopic_1526287717.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RightArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ORC動畫圖%280.3%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ezgif.com-resize.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\熱源PID.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\熱源PID2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\冷源PID.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cold_SourcePID.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ooopic_1534394013.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ooopic_1534394243.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Turbine.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Turbine03s.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output_4he3r0.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screw.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recyclebutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StartButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RecycleButton2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ResetButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TestStationButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stationButton2.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
